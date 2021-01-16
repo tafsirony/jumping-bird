@@ -67,9 +67,6 @@ void continuous()
     if(state3==1) {
                    ty7-=0.05;
                    }
-    clx1 -= 0.08;
-    if(clx1 <= -240)
-        clx1 = clx1 + 450;
 
     glutPostRedisplay();
 
@@ -804,7 +801,7 @@ void draw_bird_body()
 void keyboardListener(unsigned char key, int x,int y){
 	switch(key){
 
-		case 32:
+		case 32: // ascii val of space
             glutIdleFunc(continuous);
 			break;
 
@@ -983,7 +980,7 @@ void loadGame()
 
     glColor3f(1,1,1);
     draw_text(msg,100,-200,250); // message
-    draw_text(sc,100,-280,250); // score
+    draw_text(sc,100,-280,250); // corner score
 
     glColor3f(1,1,0);
     draw_text(txt1,100,tx1,ty1); // text1 = jumping bird
