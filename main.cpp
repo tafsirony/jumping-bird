@@ -12,8 +12,6 @@
 
 double cameraHeight;
 double cameraAngle;
-static float clx1 = 280;
-static float cly1 = 70;
 int drawgrid;
 int drawaxes;
 int a=0;
